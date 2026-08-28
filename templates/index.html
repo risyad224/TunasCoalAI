@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TunasCoal - Premium Coconut Shell Charcoal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Tunas<span>Coal</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Premium Coconut Shell Charcoal Briquettes</h2>
+            <p>Exporting high-quality charcoal to the Middle East and Europe. 100% natural, sustainable, and long-lasting heat for your business.</p>
+            <a href="#products" class="btn-primary">View Products</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Platinum Grade</h3>
+                    <p>Ash Content < 2%. Our finest quality for the most demanding requirements.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-star"></i></div>
+                    <h3>Premium Grade</h3>
+                    <p>Ash Content 2% - 2.5%. Perfect balance of quality and value.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>Medium Grade</h3>
+                    <p>Ash Content ≤ 3%. Reliable and consistent performance.</p>
+                </div>
+            </div>
+            
+            <div class="shapes-info">
+                <h3>Available Shapes</h3>
+                <div class="badges">
+                    <span class="badge">Finger Cylinder</span>
+                    <span class="badge">Finger Hexagon</span>
+                    <span class="badge">Half-Finger</span>
+                    <span class="badge">Sigma</span>
+                    <span class="badge">Hexagonal BBQ</span>
+                    <span class="badge">Cube</span>
+                    <span class="badge">Flat</span>
+                    <span class="badge">Kaloud / Lotus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Why Choose TunasCoal?</h2>
+                <ul class="features-list">
+                    <li><i class="fas fa-industry"></i> Exclusive partnership with top charcoal manufacturing facilities in Indonesia.</li>
+                    <li><i class="fas fa-box"></i> Support for OEM and private-label packaging to build your brand.</li>
+                    <li><i class="fas fa-certificate"></i> Verified quality with COA and laboratory test results available.</li>
+                    <li><i class="fas fa-ship"></i> Reliable supply capacity of ~100 MT per month (FOB Jakarta).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>TunasCoal</h3>
+                <p>Indonesian trading company specializing in coconut shell charcoal products.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Email: sales@tunascoal.com (Dummy)</p>
+                <p>WhatsApp: +62 8XX-XXXX-XXXX (Dummy)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TunasCoal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <button class="chat-toggle" id="chatToggle">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <h3><i class="fas fa-robot"></i> TunasCoal AI</h3>
+                <div>
+                    <button class="new-chat-btn" id="newChatBtn" title="New Chat" style="background:none; border:none; color:white; margin-right:10px; cursor:pointer;"><i class="fas fa-sync-alt"></i></button>
+                    <button class="close-chat" id="closeChat"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    Hello! I'm the TunasCoal AI assistant. How can I help you with our charcoal products today?
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="userInput" placeholder="Ask about our products..." autocomplete="off">
+                <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
