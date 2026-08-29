@@ -10,12 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generate random conversation ID on load
     let conversationId = 'conv-' + Math.random().toString(36).substr(2, 9);
 
-    // Initial greeting html
-    const initialGreeting = `
-        <div class="message bot-message">
-            Hello! I'm the TunasCoal AI assistant. How can I help you with our charcoal products today?
-        </div>
-    `;
+    const initialGreetingText = 'Hello. I can help with grades, shapes, packaging, export terms, and sample questions.';
 
     // Toggle Chatbox
     chatToggle.addEventListener('click', () => {
@@ -31,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // New Chat Button
     newChatBtn.addEventListener('click', () => {
-        chatMessages.innerHTML = initialGreeting;
+        chatMessages.innerHTML = '';
+        appendMessage('bot', initialGreetingText);
         conversationId = 'conv-' + Math.random().toString(36).substr(2, 9);
     });
 
@@ -89,12 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const msgDiv = document.createElement('div');
         msgDiv.className = `message ${sender}-message`;
         
-        // Simple markdown parsing for bold and line breaks
         if (sender === 'bot') {
-            let formattedText = text
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Bold
-                .replace(/\n/g, '<br>'); // Newlines
-            msgDiv.innerHTML = formattedText;
+            const escapedText = escapeHtml(text);
+            msgDiv.innerHTML = escapedText
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
         } else {
             msgDiv.textContent = text;
         }
@@ -114,5 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function removeLoading(id) {
         const el = document.getElementById(id);
         if (el) el.remove();
+    }
+
+    function escapeHtml(text) {
+        return text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
     }
 });
